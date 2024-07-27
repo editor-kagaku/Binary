@@ -3,8 +3,8 @@
 import base64
 import binascii
 import urllib.parse
-import refinery.lib.argformats
 import sys
+from refinery.lib import argformats
 
 # エンコードされた文字列のリスト
 encoded_list = ["h:507974686F6EE381A7",
@@ -19,7 +19,7 @@ message = "Binary Refineryでのデコード結果:\n".encode()
 sys.stdout.buffer.write(message)
 for encoded in encoded_list:
     # 文字列をデコード
-    decoded = refinery.lib.argformats.multibin(encoded)
+    decoded = argformats.multibin(encoded)
 
     # デコードした文字列をバイト列として出力
     sys.stdout.buffer.write(decoded)
