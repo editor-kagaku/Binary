@@ -11,11 +11,10 @@ encoded_list = ["h:507974686F6EE381A7",
                 "q:%E5%AE%9F%E8%B7%B5%E3%81%99%E3%82%8B",
                 "b64:44OQ44Kk44OK44Oq6Kej5p6Q"]
 
-# print()とsys.stdout.buffer.write()が混在していると、
-# print()はバッファリングがあり、sys.stdout.buffer.write()は
-# バッファリングがないことで出力の順序が変わってしまうため、
-# このスクリプトでは全てsys.stdout.buffer.write()に統一する。
-# メッセージはencode()でUTF-8のバイト列に変換しておく。
+# print()とsys.stdout.buffer.write()が混在していると、print()はバッファリングがあり、
+# sys.stdout.buffer.write()はバッファリングがないことで出力の順序が変わってしまうため、
+# このスクリプトでは全てsys.stdout.buffer.write()に統一する。メッセージはencode()で
+# UTF-8のバイト列に変換しておく。
 message = "Binary Refineryでのデコード結果:\n".encode()
 sys.stdout.buffer.write(message)
 for encoded in encoded_list:
