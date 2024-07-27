@@ -31,7 +31,7 @@ elif args.opt_dec:
 elif args.opt_hex:
     decoder = refinery.units.blockwise.pack.pack(base=16, width=2)
 
-# エンコードはreverse、デコードはprocessを実行する
+# エンコードはreverse()、デコードはprocess()を実行する
 if args.opt_encode:
     output = decoder.reverse(data)
 else:
@@ -61,7 +61,7 @@ if type(output) is types.GeneratorType:
 else:
     # デコードしたデータを出力する。
     # outputはBinary RefineryのChunkと呼ばれるクラスのインスタンスで、
-    # bytesであらかじめバイト列に変換してから出力する。
+    # bytes()であらかじめバイト列に変換してから出力する。
     sys.stdout.buffer.write(bytes(output))
 
 # エンコードする場合は最後に改行を出力する
