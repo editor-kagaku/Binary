@@ -30,8 +30,7 @@ for encoded in encoded_list:
 message = "\nPython標準ライブラリでのデコード結果:\n".encode()
 sys.stdout.buffer.write(message)
 for encoded in encoded_list:
-    # 標準のPythonモジュールの場合はエンコーディングの種別を表す部分を
-    # 取り除いてからデコードする
+    # 標準のPythonモジュールの場合はエンコーディングの種別を表す部分を取り除いてからデコードする
     if encoded[:2] == "h:":
         # 16進数の文字列をデコード
         decoded = binascii.a2b_hex(encoded[2:])
