@@ -3,8 +3,8 @@
 import argparse
 import os
 import sys
-import refinery.units.compression.decompress
-import refinery.lib.meta
+from refinery.lib import meta
+from refinery.units.compression import decompress
 
 # オプションや引数の処理
 parser = argparse.ArgumentParser()
@@ -16,11 +16,11 @@ with open(args.filepath, "rb") as f:
     data = f.read()
 
 # 圧縮ファイルの種類を判別する
-magic = refinery.lib.meta.metavars(data).magic
+magic = meta.metavars(data).magic
 print(f"Type: {magic}")
 
 # prepend=Falseはコマンドで-Pオプションを付けた場合と同様の動作となる
-decomp =  refinery.units.compression.decompress.decompress(prepend=False)
+decomp =  decompress.decompress(prepend=False)
 output = decomp.process(data)
 
 # outputとdataが同一の場合は展開に失敗しているため、

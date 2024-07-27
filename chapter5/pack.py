@@ -1,9 +1,9 @@
 # pack.py: 2進数、8進数、10進数、16進数のデコードとエンコードを行うスクリプト
 
 import argparse
-import refinery.units.blockwise.pack
 import sys
 import types
+from refinery.units.blockwise import pack
 
 # オプションの処理
 # -2、-8、-10、-16のいずれかの指定を必須にする
@@ -23,13 +23,13 @@ data = sys.stdin.buffer.read()
 
 # オプションに応じてpackクラスの初期化を行う
 if args.opt_bin:
-    decoder = refinery.units.blockwise.pack.pack(base=2, width=8)
+    decoder = pack.pack(base=2, width=8)
 elif args.opt_oct:
-    decoder = refinery.units.blockwise.pack.pack(base=8)
+    decoder = pack.pack(base=8)
 elif args.opt_dec:
-    decoder = refinery.units.blockwise.pack.pack(base=10)
+    decoder = pack.pack(base=10)
 elif args.opt_hex:
-    decoder = refinery.units.blockwise.pack.pack(base=16, width=2)
+    decoder = pack.pack(base=16, width=2)
 
 # エンコードはreverse()、デコードはprocess()を実行する
 if args.opt_encode:
