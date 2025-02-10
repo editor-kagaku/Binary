@@ -47,3 +47,51 @@
 ## リンク集
 
 本文中で参照しているWebリンクは[こちら](https://github.com/editor-kagaku/Binary/blob/main/links.md)をご覧ください。
+
+## コマンド例、サンプルコードの不具合について
+### 第5章 P.190
+以下のコマンド例についてBinary Refineryのバージョン0.7.8(2024年11月20日リリース)から0.8.3(2025年2月4日リリース)で正しく動作しない不具合がありました。バージョン0.8.4(2025年2月7日)で[修正](https://github.com/binref/refinery/issues/80)されています。
+
+不具合のないバージョンの場合:
+```
+!emit h:00112233445566778899aabbccddeeff | snip :-5:-1 | peek -W 16 -r
+```
+```
+--------------------------------------------------------------------
+0: FF EE DD CC                                      ....
+--------------------------------------------------------------------
+```
+不具合のあるバージョンの場合:
+```
+!emit h:00112233445566778899aabbccddeeff | snip :-5:-1 | peek -W 16 -r
+```
+```
+--------------------------------------------------------------------
+```
+
+### 第5章 P.256-257
+deobfuscate.pyについて、Binary Refineryのバージョン0.7.4(2024年9月10日リリース)からzlモジュールの動作が変更されて`zl.process(output)`が`bytes`の代わりにジェネレータを返すようになったため、`sys.stdout.buffer.write(output)`の行で`TypeError: a bytes-like object is required, not 'generator'`のエラーが発生して動作しなくなりました。deobfuscate.pyを以下のように修正することで動作するようになります。
+
+修正前:
+```python
+# Deflateアルゴリズムでの展開(zlibヘッダー無し)
+zl = zl.zl()
+output = zl.process(output)
+
+# 可読化されたPHPコードはbytesとなっているため、
+# print()の代わりにsys.stdout.buffer.write()で出力する
+sys.stdout.buffer.write(output)
+```
+
+修正後:
+```python
+# Deflateアルゴリズムでの展開(zlibヘッダー無し)
+zl = zl.zl()
+gen = zl.process(output)
+
+# ジェネレータgenをforループで処理する。
+# 可読化されたPHPコードはbytesとなっているため、
+# print()の代わりにsys.stdout.buffer.write()で出力する。
+for output in gen:
+    sys.stdout.buffer.write(output)
+```

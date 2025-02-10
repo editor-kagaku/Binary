@@ -24,8 +24,10 @@ output = b64.process(output)
 
 # Deflateアルゴリズムでの展開(zlibヘッダー無し)
 zl = zl.zl()
-output = zl.process(output)
+gen = zl.process(output)
 
+# ジェネレータgenをforループで処理する。
 # 可読化されたPHPコードはbytesとなっているため、
-# print()の代わりにsys.stdout.buffer.write()で出力する
-sys.stdout.buffer.write(output)
+# print()の代わりにsys.stdout.buffer.write()で出力する。
+for output in gen:
+    sys.stdout.buffer.write(output)
