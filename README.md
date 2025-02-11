@@ -4,6 +4,11 @@
 
 『[ゼロからマスター！Colab×Pythonでバイナリファイル解析実践ガイド](https://www.it-book.co.jp/books/154.html)』（科学情報出版）のサポートリポジトリです。
 
+- [コード](https://github.com/editor-kagaku/Binary#%E3%82%B3%E3%83%BC%E3%83%89)
+- [リンク集](https://github.com/editor-kagaku/Binary#%E3%83%AA%E3%83%B3%E3%82%AF%E9%9B%86)
+- [コマンド例、サンプルコードの不具合について](https://github.com/editor-kagaku/Binary#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E4%BE%8B%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E4%B8%8D%E5%85%B7%E5%90%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
+- [正誤表](https://github.com/editor-kagaku/Binary#%E6%AD%A3%E8%AA%A4%E8%A1%A8%0A)
+
 ## コード
 
 | 章 | 節／項 | Colab | Link |
@@ -95,3 +100,6 @@ gen = zl.process(output)
 for output in gen:
     sys.stdout.buffer.write(output)
 ```
+
+## 正誤表
+本書の正誤表は[こちら](https://github.com/editor-kagaku/Binary/errata.md)をご覧ください。

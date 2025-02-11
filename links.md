@@ -117,7 +117,7 @@
 - https://www.php.net/manual/ja/language.types.string.php#language.types.string.syntax.heredoc
 - https://downloadcenter.trellix.com/products/mcafee-avert/fileinsight.msi
 - https://github.com/nmantani/FileInsight-plugins/blob/master/README.ja.md
-- https://codeblue.jp/2019/bluebox/FileInsight-plugins/
+- https://archive.codeblue.jp/2019/bluebox/FileInsight-plugins/
 - https://www.blackhat.com/us-21/arsenal/schedule/
 - https://github.com/nmantani/FileInsight-plugins/blob/master/docs/FileInsight-plugins-Black%20Hat%20USA%202021%20Arsenal.pdf
 - https://github.com/binref/refinery/issues/24
