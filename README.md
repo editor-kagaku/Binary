@@ -4,11 +4,12 @@
 
 『[ゼロからマスター！Colab×Pythonでバイナリファイル解析実践ガイド](https://www.it-book.co.jp/books/154.html)』（科学情報出版）のサポートリポジトリです。
 
-- [コード](https://github.com/editor-kagaku/Binary#%E3%82%B3%E3%83%BC%E3%83%89)
-- [リンク集](https://github.com/editor-kagaku/Binary#%E3%83%AA%E3%83%B3%E3%82%AF%E9%9B%86)
-- [コマンド例、サンプルコードの不具合](https://github.com/editor-kagaku/Binary#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E4%BE%8B%E3%80%81%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E4%B8%8D%E5%85%B7%E5%90%88)
-- [正誤表](https://github.com/editor-kagaku/Binary#%E6%AD%A3%E8%AA%A4%E8%A1%A8)
+- [コード](#code)
+- [リンク集](#link)
+- [コマンド例、サンプルコードの不具合](#defect)
+- [正誤表](#errta)
 
+<a name="code"></a>
 ## コード
 
 | 章 | 節／項 | Colab | Link |
@@ -49,11 +50,14 @@
 | 付録 | 付録B 各数値表記とASCIIの対応表 |  [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/editor-kagaku/Binary/blob/main/appendix/付録B_各数値表記とASCIIの対応表.ipynb) | [Link](https://github.com/editor-kagaku/Binary/blob/main/appendix/付録B_各数値表記とASCIIの対応表.ipynb) |
 
 
+<a name="link"></a>
 ## リンク集
 
 本文中で参照しているWebリンクは[こちら](https://github.com/editor-kagaku/Binary/blob/main/links.md)をご覧ください。
 
+<a name="defect"></a>
 ## コマンド例、サンプルコードの不具合
+
 ### 第5章 P.190
 以下のコマンド例についてBinary Refineryのバージョン0.7.8(2024年11月20日リリース)から0.8.3(2025年2月4日リリース)で正しく動作しない不具合がありました。バージョン0.8.4(2025年2月7日)で[修正](https://github.com/binref/refinery/issues/80)されています。
 
@@ -101,5 +105,7 @@ for output in gen:
     sys.stdout.buffer.write(output)
 ```
 
+<a name="errta"></a>
 ## 正誤表
+
 本書の正誤表は[こちら](https://github.com/editor-kagaku/Binary/errata.md)をご覧ください。
