@@ -6,8 +6,8 @@
 
 - [コード](https://github.com/editor-kagaku/Binary#%E3%82%B3%E3%83%BC%E3%83%89)
 - [リンク集](https://github.com/editor-kagaku/Binary#%E3%83%AA%E3%83%B3%E3%82%AF%E9%9B%86)
-- [コマンド例、サンプルコードの不具合について](https://github.com/editor-kagaku/Binary#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E4%BE%8B%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E4%B8%8D%E5%85%B7%E5%90%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
-- [正誤表](https://github.com/editor-kagaku/Binary#%E6%AD%A3%E8%AA%A4%E8%A1%A8%0A)
+- [コマンド例、サンプルコードの不具合](https://github.com/editor-kagaku/Binary#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E4%BE%8B%E3%80%81%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E4%B8%8D%E5%85%B7%E5%90%88)
+- [正誤表](https://github.com/editor-kagaku/Binary#%E6%AD%A3%E8%AA%A4%E8%A1%A8)
 
 ## コード
 
@@ -53,7 +53,7 @@
 
 本文中で参照しているWebリンクは[こちら](https://github.com/editor-kagaku/Binary/blob/main/links.md)をご覧ください。
 
-## コマンド例、サンプルコードの不具合について
+## コマンド例、サンプルコードの不具合
 ### 第5章 P.190
 以下のコマンド例についてBinary Refineryのバージョン0.7.8(2024年11月20日リリース)から0.8.3(2025年2月4日リリース)で正しく動作しない不具合がありました。バージョン0.8.4(2025年2月7日)で[修正](https://github.com/binref/refinery/issues/80)されています。
 
