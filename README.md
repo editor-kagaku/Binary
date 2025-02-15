@@ -83,10 +83,6 @@ deobfuscate.pyについて、Binary Refineryのバージョン0.7.4(2024年9月1
 
 修正前:
 ```python
-# Deflateアルゴリズムでの展開(zlibヘッダー無し)
-zl = zl.zl()
-output = zl.process(output)
-
 # 可読化されたPHPコードはbytesとなっているため、
 # print()の代わりにsys.stdout.buffer.write()で出力する
 sys.stdout.buffer.write(output)
@@ -94,10 +90,6 @@ sys.stdout.buffer.write(output)
 
 修正後:
 ```python
-# Deflateアルゴリズムでの展開(zlibヘッダー無し)
-zl = zl.zl()
-gen = zl.process(output)
-
 # ジェネレータgenをforループで処理する。
 # 可読化されたPHPコードはbytesとなっているため、
 # print()の代わりにsys.stdout.buffer.write()で出力する。
