@@ -78,6 +78,46 @@
 --------------------------------------------------------------------
 ```
 
+### 第5章 P.191-192
+以下のコマンド例についてBinary Refineryのバージョン0.7.8(2024年11月20日リリース)から0.8.3(2025年2月4日リリース)で正しく動作しない不具合がありました。バージョン0.8.4(2025年2月7日)で[修正](https://github.com/binref/refinery/issues/80)されています。
+
+不具合のないバージョンの場合:
+```
+!python3 snip-chop.py
+```
+```
+Original data:
+0123456789ABCDEF
+
+Snipped data:
+456789AB
+FEDC
+
+Chopped data:
+0123
+4567
+89AB
+CDEF
+```
+不具合のあるバージョンの場合:
+```
+!python3 snip-chop.py
+```
+```
+Original data:
+0123456789ABCDEF
+
+Snipped data:
+456789AB
+
+
+Chopped data:
+0123
+4567
+89AB
+CDEF
+```
+
 ### 第5章 P.256-257
 deobfuscate.pyについて、Binary Refineryのバージョン0.7.4(2024年9月10日リリース)からzlモジュールの動作が変更されて`zl.process(output)`が`bytes`の代わりにジェネレータを返すようになったため、`sys.stdout.buffer.write(output)`の行で`TypeError: a bytes-like object is required, not 'generator'`のエラーが発生して動作しなくなりました。deobfuscate.pyを以下のように修正することで動作するようになります。
 
